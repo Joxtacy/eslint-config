@@ -1,0 +1,23 @@
+{
+  "name": "@joxtacy/eslint-config",
+  "version": "0.0.1",
+  "description": "My ESLint configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joxtacy/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Jesper Hasselquist <jesper.hasselquist@gmail.com> (https://joxtacy.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Joxtacy/eslint-config/issues"
+  },
+  "homepage": "https://github.com/Joxtacy/eslint-config#readme"
+}
