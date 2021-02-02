@@ -15,8 +15,9 @@ pipeline {
                     def packageJSON = readJSON file: "./package.json"
                     def version = packageJSON.version
                     echo "this is version in package.json: ${version}"
-                    def remVersion = sh "npm view . version --registry=${REGISTRY}"
-                    echo "this is remote version: ${remVersion}"
+                    //def remVersion = sh "npm view . version --registry=${REGISTRY}"
+                    //echo "this is remote version: ${remVersion}"
+                    sh "npm publish"
                 }
             }
         }
