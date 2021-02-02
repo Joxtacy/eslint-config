@@ -1,8 +1,11 @@
 {
-  "name": "@joxtacy/eslint-config",
+  "name": "@jox/eslint-config",
   "version": "0.0.1",
   "description": "My ESLint configuration",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
