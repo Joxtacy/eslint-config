@@ -1,7 +1,12 @@
 pipeline {
-    agent { docker { image 'node:14-alpine' } }
+    agent {
+        docker {
+            image 'node:14-alpine'
+            args '--network="host"' // makes sure the docker in docker can connect to the outside network, which is still in the outer container.
+        }
+    }
     environment {
-        REGISTRY = "http://localhost:4873"
+        REGISTRY = "http://verdaccio:4873" // this is verdaccio because that is the alias of that container
     }
     stages {
         stage('build') {
@@ -15,9 +20,9 @@ pipeline {
                     def packageJSON = readJSON file: "./package.json"
                     def version = packageJSON.version
                     echo "this is version in package.json: ${version}"
-                    //def remVersion = sh "npm view . version --registry=${REGISTRY}"
-                    //echo "this is remote version: ${remVersion}"
-                    sh "npm publish"
+                    def remVersion = sh(returnStdout: true, script: "npm view . version --registry=${REGISTRY}").trim()
+                    echo "this is remote version: ${remVersion}"
+                    //sh "npm publish" // needs authtoken. How to add that to jenkins and fetch it for publish?
                 }
             }
         }
