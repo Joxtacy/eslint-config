@@ -34,11 +34,10 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'verdaccio-publish', variable: 'TOKEN')]) {
                     sh "echo //verdaccio:4873/:_authToken=${TOKEN} > .npmrc"
-                    sh "npm publish" // needs authtoken. How to add that to jenkins and fetch it for publish?
+                    sh "npm publish"
                     sh "rm .npmrc"
                 }
             }
         }
     }
 }
-
