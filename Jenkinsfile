@@ -22,14 +22,17 @@ pipeline {
                     echo "this is version in package.json: ${version}"
                     def remVersion = sh(returnStdout: true, script: "npm view . version --registry=${REGISTRY}").trim()
                     echo "this is remote version: ${remVersion}"
-                    //sh "npm publish" // needs authtoken. How to add that to jenkins and fetch it for publish?
                     if (version == remVersion) {
-                        //currentBuild.result = "FAILURE"
                         error("Version is not bumped")
                     } else {
-                        echo "things went well"
+                        echo "We are good to go for publish"
                     }
                 }
+            }
+        }
+        stage('publish') {
+            steps {
+                sh "npm publish" // needs authtoken. How to add that to jenkins and fetch it for publish?
             }
         }
     }
