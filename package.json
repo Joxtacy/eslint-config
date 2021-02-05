@@ -4,8 +4,8 @@
   "description": "My ESLint configuration",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint -c index.js .",
-    "lint:fix": "eslint --fix -c index.js .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "npm run lint"
   },
   "repository": {
