@@ -12,7 +12,7 @@ module.exports = {
             "1tbs",
             {
                 "allowSingleLine": false,
-            }
+            },
         ],
         "comma-dangle": [
             "error",
@@ -21,24 +21,24 @@ module.exports = {
                 "objects": "always-multiline",
                 "imports": "always-multiline",
                 "exports": "always-multiline",
-                "functions": "never"
-            }
+                "functions": "never",
+            },
         ],
         "eol-last": ["error", "always"],
         "indent": [
             "error",
             4,
             {
-                "SwitchCase": 1
-            }
+                "SwitchCase": 1,
+            },
         ],
         "key-spacing": [
             "warn",
             {
                 "beforeColon": false,
                 "afterColon": true,
-                "mode": "strict"
-            }
+                "mode": "strict",
+            },
         ],
         "keyword-spacing": "error",
         "linebreak-style": ["error", "unix"],
@@ -49,17 +49,17 @@ module.exports = {
                     "warn",
                     "info",
                     "group",
-                    "groupEnd"
-                ]
-            }
+                    "groupEnd",
+                ],
+            },
         ],
         "no-multiple-empty-lines": [
             "warn",
             {
                 "max": 2,
                 "maxEOF": 1,
-                "maxBOF": 0
-            }
+                "maxBOF": 0,
+            },
         ],
         "no-negated-condition": ["warn"],
         "no-tabs": "warn",
@@ -67,8 +67,8 @@ module.exports = {
             "warn",
             {
                 "skipBlankLines": false,
-                "ignoreComments": false
-            }
+                "ignoreComments": false,
+            },
         ],
         "no-useless-concat": "error",
         "no-var": "error",
@@ -77,23 +77,23 @@ module.exports = {
             "always",
             {
                 "arraysInObjects": false,
-                "objectsInObjects": false
-            }
+                "objectsInObjects": false,
+            },
         ],
         "prefer-const": [
             "error",
             {
                 "destructuring": "any",
-                "ignoreReadBeforeAssign": false
-            }
+                "ignoreReadBeforeAssign": false,
+            },
         ],
         "prefer-template": "warn",
         "quotes": [
             "error",
             "double",
             {
-                "avoidEscape": true
-            }
+                "avoidEscape": true,
+            },
         ],
         "semi": ["error", "always"],
         "space-before-blocks": "error",
@@ -101,9 +101,9 @@ module.exports = {
             "error",
             {
                 "after": true,
-                "before": false
-            }
+                "before": false,
+            },
         ],
-        "template-curly-spacing": ["warn", "never"]
-    }
-}
+        "template-curly-spacing": ["warn", "never"],
+    },
+};
