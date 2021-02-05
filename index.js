@@ -1,6 +1,24 @@
 module.exports = {
     extends: ["eslint:recommended"],
     rules: {
+        "arrow-parens": ["error", "always"],
+        "brace-style": [
+            "error",
+            "1tbs",
+            {
+                "allowSingleLine": false,
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ],
         "eol-last": ["error", "always"],
         "indent": [
             "error",
