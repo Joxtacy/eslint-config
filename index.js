@@ -1,5 +1,10 @@
 module.exports = {
     extends: ["eslint:recommended"],
+    "env": {
+        "browser": true,
+        "amd": true,
+        "node": true,
+    },
     rules: {
         "arrow-parens": ["error", "always"],
         "brace-style": [
