@@ -6,15 +6,8 @@ module.exports = {
         "node": true,
     },
     rules: {
-        "arrow-parens": ["error", "always"],
-        "brace-style": [
-            "error",
-            "1tbs",
-            {
-                "allowSingleLine": false,
-            },
-        ],
-        "comma-dangle": [
+        // Possible Errors
+        "comma-dangle": [ // v0.16.0
             "error",
             {
                 "arrays": "always-multiline",
@@ -24,25 +17,7 @@ module.exports = {
                 "functions": "never",
             },
         ],
-        "eol-last": ["error", "always"],
-        "indent": [
-            "error",
-            4,
-            {
-                "SwitchCase": 1,
-            },
-        ],
-        "key-spacing": [
-            "warn",
-            {
-                "beforeColon": false,
-                "afterColon": true,
-                "mode": "strict",
-            },
-        ],
-        "keyword-spacing": "error",
-        "linebreak-style": ["error", "unix"],
-        "no-console": [
+        "no-console": [ // v0.0.2
             "error",
             {
                 "allow": [
@@ -53,7 +28,38 @@ module.exports = {
                 ],
             },
         ],
-        "no-multiple-empty-lines": [
+        // Best Practices
+        "no-useless-concat": "error", // v1.3.0
+        // Strict Mode
+        // Variables
+        // Node.js and CommonJS
+        // Stylistic Issues
+        "brace-style": [ // v0.0.7
+            "error",
+            "1tbs",
+            {
+                "allowSingleLine": false,
+            },
+        ],
+        "eol-last": ["error", "always"], // v0.7.1
+        "indent": [ // v0.14.0
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+            },
+        ],
+        "key-spacing": [ // v0.9.0
+            "warn",
+            {
+                "beforeColon": false,
+                "afterColon": true,
+                "mode": "strict",
+            },
+        ],
+        "keyword-spacing": "error", // v2.0.0-beta.1
+        "linebreak-style": ["error", "unix"], // v0.21.0
+        "no-multiple-empty-lines": [ // v0.9.0
             "warn",
             {
                 "max": 2,
@@ -61,18 +67,16 @@ module.exports = {
                 "maxBOF": 0,
             },
         ],
-        "no-negated-condition": ["warn"],
-        "no-tabs": "warn",
-        "no-trailing-spaces": [
+        "no-negated-condition": ["warn"], // v1.6.0
+        "no-tabs": "warn", // v3.2.0
+        "no-trailing-spaces": [ // v0.7.1
             "warn",
             {
                 "skipBlankLines": false,
                 "ignoreComments": false,
             },
         ],
-        "no-useless-concat": "error",
-        "no-var": "error",
-        "object-curly-spacing": [
+        "object-curly-spacing": [ // v0.22.0
             "warn",
             "always",
             {
@@ -80,30 +84,33 @@ module.exports = {
                 "objectsInObjects": false,
             },
         ],
-        "prefer-const": [
-            "error",
-            {
-                "destructuring": "any",
-                "ignoreReadBeforeAssign": false,
-            },
-        ],
-        "prefer-template": "warn",
-        "quotes": [
+        "quotes": [ // v0.0.7
             "error",
             "double",
             {
                 "avoidEscape": true,
             },
         ],
-        "semi": ["error", "always"],
-        "space-before-blocks": "error",
-        "switch-colon-spacing": [
+        "semi": ["error", "always"], // v0.0.6
+        "space-before-blocks": "error", // v0.9.0
+        "switch-colon-spacing": [ // v4.0.0-beta.0
             "error",
             {
                 "after": true,
                 "before": false,
             },
         ],
-        "template-curly-spacing": ["warn", "never"],
+        // ECMAScript 6
+        "arrow-parens": ["error", "always"], // v1.0.0-rc-1
+        "no-var": "error", // v0.12.0
+        "prefer-const": [ // v0.23.0
+            "error",
+            {
+                "destructuring": "any",
+                "ignoreReadBeforeAssign": false,
+            },
+        ],
+        "prefer-template": "warn", // v1.2.0
+        "template-curly-spacing": ["warn", "never"], // v2.0.0-rc.0
     },
 };
