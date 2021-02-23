@@ -37,17 +37,13 @@ module.exports = {
         "brace-style": [ // v0.0.7
             "error",
             "1tbs",
-            {
-                "allowSingleLine": false,
-            },
+            { "allowSingleLine": false },
         ],
         "eol-last": ["error", "always"], // v0.7.1
         "indent": [ // v0.14.0
             "error",
             4,
-            {
-                "SwitchCase": 1,
-            },
+            { "SwitchCase": 1 },
         ],
         "key-spacing": [ // v0.9.0
             "warn",
@@ -79,10 +75,16 @@ module.exports = {
         "object-curly-newline": [ // v2.12.0
             "error",
             {
-                "ObjectExpression": { "multiline": true, "minProperties": 2 },
+                "ObjectExpression": {
+                    "multiline": true, "minProperties": 2,
+                },
                 "ObjectPattern": { "multiline": true },
-                "ImportDeclaration": { "multiline": true, "minProperties": 2 },
-                "ExportDeclaration": { "multiline": true, "minProperties": 2 }
+                "ImportDeclaration": {
+                    "multiline": true, "minProperties": 2,
+                },
+                "ExportDeclaration": {
+                    "multiline": true, "minProperties": 2,
+                },
             },
         ],
         "object-curly-spacing": [ // v0.22.0
@@ -96,9 +98,7 @@ module.exports = {
         "quotes": [ // v0.0.7
             "error",
             "double",
-            {
-                "avoidEscape": true,
-            },
+            { "avoidEscape": true },
         ],
         "semi": ["error", "always"], // v0.0.6
         "space-before-blocks": "error", // v0.9.0
