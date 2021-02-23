@@ -76,6 +76,15 @@ module.exports = {
                 "ignoreComments": false,
             },
         ],
+        "object-curly-newline": [ // v2.12.0
+            "error",
+            {
+                "ObjectExpression": { "multiline": true, "minProperties": 2 },
+                "ObjectPattern": { "multiline": true },
+                "ImportDeclaration": { "multiline": true, "minProperties": 2 },
+                "ExportDeclaration": { "multiline": true, "minProperties": 2 }
+            },
+        ],
         "object-curly-spacing": [ // v0.22.0
             "warn",
             "always",
